@@ -9,5 +9,5 @@ extract_download_url() {
 
 }
 
-wget --continue $( extract_download_url http://www.mediafire.com/file/ropayv77vklvf56/openpose_coco.npy ) -O openpose_coco.npy
-wget --continue $( extract_download_url http://www.mediafire.com/file/7e73ddj31rzw6qq/openpose_vgg16.npy ) -O openpose_vgg16.npy
+wget -nc --continue $( extract_download_url http://www.mediafire.com/file/ropayv77vklvf56/openpose_coco.npy ) -O openpose_coco.npy
+wget -nc --continue $( extract_download_url http://www.mediafire.com/file/7e73ddj31rzw6qq/openpose_vgg16.npy ) -O openpose_vgg16.npy
