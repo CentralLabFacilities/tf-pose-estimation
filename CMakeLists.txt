@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  roslaunch
   message_generation
 )
 
@@ -26,8 +27,16 @@ generate_messages(
   DEPENDENCIES std_msgs
 )
 
+##################
+## launch files ##
+##################
+
+roslaunch_add_file_check(launch)
+
 catkin_package(
   CATKIN_DEPENDS rospy message_generation message_runtime
 )
-
+install(DIRECTORY launch
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 install()
