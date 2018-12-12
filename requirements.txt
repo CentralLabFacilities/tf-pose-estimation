@@ -1,7 +1,7 @@
 argparse
 dill
 fire
-matplotlib
+matplotlib===2.2.3
 psutil
 requests
 scikit-image
