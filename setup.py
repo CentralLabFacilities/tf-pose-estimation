@@ -24,7 +24,7 @@ REQUIRED_PACKAGES = [
     'psutil >= 5.4.5',
     'requests >= 2.18.4',
     'scikit-image >= 0.13.1',
-    'scipy >= 1.1.0',
+    'scipy == 1.1.0',
     'slidingwindow >= 0.0.13',
     'tqdm >= 4.23.4',
     'tensorpack >= 0.8.5',
