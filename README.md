@@ -39,13 +39,23 @@ You need dependencies below.
 
 ### Install
 
+Clone the repo and install 3rd-party libraries.
+
 ```bash
 $ git clone https://www.github.com/ildoonet/tf-openpose
 $ cd tf-openpose
 $ pip3 install -r requirements.txt
 ```
 
-### Alternative Package Install
+Build c++ library for post processing. See : https://github.com/ildoonet/tf-pose-estimation/tree/master/tf_pose/pafprocess
+```
+$ cd tf_pose/pafprocess
+$ swig -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
+```
+
+### Package Install
+
+Alternatively, you can install this repo as a shared package using pip.
 
 ```bash
 $ git clone https://www.github.com/ildoonet/tf-openpose
@@ -114,7 +124,7 @@ $ bash download.sh
 You can test the inference feature with a single image.
 
 ```
-$ python3 tf_pose/run.py --model=mobilenet_thin --resize=432x368 --image=./images/p1.jpg
+$ python run.py --model=mobilenet_thin --resize=432x368 --image=./images/p1.jpg
 ```
 
 The image flag MUST be relative to the src folder with no "~", i.e:
@@ -129,7 +139,7 @@ Then you will see the screen as below with pafmap, heatmap, result and etc.
 ### Realtime Webcam
 
 ```
-$ python tf_pose/run_webcam.py --model=mobilenet_thin --resolution=432x368 --camera=0
+$ python run_webcam.py --model=mobilenet_thin --resize=432x368 --camera=0
 ```
 
 Then you will see the realtime webcam screen with estimated poses as below. This [Realtime Result](./etcs/openpose_macbook13_mobilenet2.gif) was recored on macbook pro 13" with 3.1Ghz Dual-Core CPU.
