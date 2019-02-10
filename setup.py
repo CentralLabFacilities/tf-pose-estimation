@@ -23,7 +23,7 @@ REQUIRED_PACKAGES = [
     'matplotlib >2,<3',
     'psutil >= 5.4.5',
     'requests >= 2.18.4',
-    'numpy == 1.14.0',
+    'numpy == 1.16.1',
     'scikit-image == 0.13.1',
     'scipy == 1.1.0',
     'slidingwindow >= 0.0.13',
